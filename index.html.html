@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Design & Chassis Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome CDN for Engineering and Tech Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        engineering: {
+                            dark: '#0B0F19',
+                            card: '#111827',
+                            cardLight: '#1F2937',
+                            accent: '#2563EB', // Precision Blue
+                            accentHover: '#1D4ED8',
+                            textMuted: '#9CA3AF',
+                            border: '#374151'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Blueprint grid styling for engineering aesthetic -->
+    <style>
+        .blueprint-grid {
+            background-size: 20px 20px;
+            background-image: linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-engineering-dark text-white font-sans antialiased selection:bg-engineering-accent selection:text-white blueprint-grid">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-engineering-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="flex items-center justify-center w-10 h-10 rounded bg-blue-600/10 border border-blue-500/30 text-engineering-accent">
+                        <i class="fa-solid fa-compass-drafting text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-mono text-xs text-engineering-accent tracking-widest block font-bold">SARAT CHANDRA MEDIDA</span>
+                        <span class="text-sm font-bold tracking-tight text-white">Portfolio</span>
+                    </div>
+                </div>
+                <!-- Navigation Subsystem Controls -->
+                <div class="hidden md:flex space-x-8 text-xs font-mono uppercase tracking-wider">
+                    <a href="#hero" class="text-white hover:text-engineering-accent transition-colors">Home</a>
+                    <a href="#dynamic-showcase" class="text-engineering-textMuted hover:text-white transition-colors">Multi-Body Systems</a>
+                    <a href="#component-design" class="text-engineering-textMuted hover:text-white transition-colors">Component Design</a>
+                    <a href="#components-specs" class="text-engineering-textMuted hover:text-white transition-colors">Technical Spec</a>
+                </div>
+                <div>
+                    <a href="SARAT CHANDRA- RESUME.pdf" target="_blank" class="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-engineering-accent border border-blue-500/30 rounded text-xs font-mono tracking-wider uppercase transition-all">
+                        <i class="fa-solid fa-file-pdf mr-1.5"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-32 pb-12 md:pt-40 md:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-12 text-center space-y-6">
+                <span class="inline-flex items-center space-x-2 text-xs font-semibold tracking-widest text-engineering-accent uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                    <i class="fa-solid fa-microchip mr-1.5"></i> Engineering Showcase
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
+                    Design and Development of Chassis Components
+                </h1>
+                <p class="text-base sm:text-lg text-engineering-textMuted font-medium leading-relaxed max-w-2xl mx-auto">
+                    Designed and Developed Automotive Suspension Systems from 3D Modeling Through Kinematic Verification, Stress Evaluation, and Blueprint Assembly Optimizations using CATIA.
+                </p>
+                <div class="pt-2 flex justify-center gap-3">
+                    <a href="#dynamic-showcase" class="px-6 py-3 bg-engineering-accent hover:bg-engineering-accentHover text-white text-xs font-bold rounded uppercase tracking-wider transition-all shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-gears mr-1.5"></i> View Subsystems
+                    </a>
+                    <a href="#components-specs" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold rounded uppercase tracking-wider transition-all border border-gray-700">
+                        <i class="fa-solid fa-circle-info mr-1.5"></i> Specifications
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DYNAMIC SHOWCASE SECTION -->
+    <section id="dynamic-showcase" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-800">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-xs font-bold text-engineering-accent tracking-widest uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">System-Level Engineering</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-4">Multi-Body Suspension Assemblies</h2>
+            <p class="mt-4 text-engineering-textMuted">
+                Select a subsystem tab below to analyze the visual clearances, multi-body kinematics, exploded layouts, and specifications for front and rear axle dynamic systems.
+            </p>
+        </div>
+
+        <!-- Dynamic Subsystem Tab Selectors -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-gray-900/80 p-1.5 rounded-lg border border-gray-800 flex space-x-2">
+                <button onclick="switchSubsystem('front')" id="tab-btn-front" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md">
+                    <i class="fa-solid fa-car-side mr-1.5"></i> Front Subsystem
+                </button>
+                <button onclick="switchSubsystem('rear')" id="tab-btn-rear" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white">
+                    <i class="fa-solid fa-car mr-1.5"></i> Rear Subsystem
+                </button>
+            </div>
+        </div>
+
+        <!-- SUB-CONTAINER: FRONT SUSPENSION -->
+        <div id="subsystem-front" class="space-y-16 transition-opacity duration-300">
+            
+            <!-- Assembly Detail -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 bg-engineering-card p-4 rounded-xl border border-gray-800 shadow-2xl">
+                    <div class="relative group overflow-hidden rounded-lg bg-black/50 border border-gray-800 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                        <img src="FRONT SUSPENSION IMAGE_2.png" 
+                             alt="Front Suspension Full Kinematic Model Assembly" 
+                             class="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                        <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-1.5 rounded text-xs font-mono border border-gray-700/80">
+                            <i class="fa-solid fa-circle-nodes text-blue-500 mr-1.5 animate-pulse"></i>Front Suspension Kinematic Model
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Front Configuration</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Double-Wishbone Suspension Component Integration</h3>
+                    </div>
+                    <p class="text-base text-engineering-textMuted leading-relaxed font-light">
+                        This structural front corner assembly maps out standard double-wishbone layouts designed to deliver precise camber change curves and roll center parameters. Designed and mapped to subframe structures with physical clearance validations during full travel sweeps.
+                    </p>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h4 class="text-xs font-mono uppercase tracking-wider text-white mb-3">Key Design Deliverables:</h4>
+                        <ul class="space-y-3 text-sm text-engineering-textMuted font-light">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-shield-halved text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Material Performance:</strong> Optimized lightweight cast aluminum unsprung upright structures to reduce rotational mass.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-expand text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Interference Sweeps:</strong> Validated that steering paths stay clear of dynamic suspension links through high-degree turns.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exploded Technical Blueprint & BOM Sheet -->
+            <div class="bg-engineering-card rounded-xl border border-gray-800 p-6 sm:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider">Subsystem Drafting & Layout</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Exploded View & CATIA Drafting Integration</h3>
+                            </div>
+                            <span class="px-2.5 py-1 text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded uppercase font-mono">Sheet 01 / Front Chassis</span>
+                        </div>
+                        <div class="relative group overflow-hidden rounded-lg bg-white p-2 border border-gray-700 shadow-xl">
+                            <img src="Exploded_view_front_Suspension.jpg" 
+                                 alt="Exploded View Front Suspension with Bill of Materials and Torque Spec Callouts" 
+                                 class="w-full h-auto object-contain rounded">
+                            <div class="absolute bottom-3 right-3 bg-engineering-dark/95 text-white px-3 py-1.5 text-[10px] font-mono rounded border border-gray-700 flex items-center gap-1.5 shadow-lg">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                CATIA V5 Drafting Layout
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 bg-black/40 rounded-xl p-5 border border-gray-800/80 space-y-6 self-stretch flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+                                <h4 class="text-sm font-bold uppercase tracking-wider font-mono text-white flex items-center">
+                                    <i class="fa-solid fa-list-ol text-engineering-accent mr-2"></i> Front Assembly BOM
+                                </h4>
+                                <span class="text-xs text-engineering-textMuted font-mono">Part List Extract</span>
+                            </div>
+                            <p class="text-xs text-engineering-textMuted mt-3 mb-4 leading-relaxed">
+                                A summarized tracking of front design layers structured within our digital component design hierarchy.
+                            </p>
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">1. Front Subframe Grounding</span>
+                                    <span class="text-engineering-accent font-bold">1x Structural</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">2. Front Strut Assembly</span>
+                                    <span class="text-engineering-accent font-bold">2x Damping</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">3. Lower Control A-Arm Linkage</span>
+                                    <span class="text-engineering-accent font-bold">2x Kinematic</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">4. Steering Gear Assembly</span>
+                                    <span class="text-engineering-accent font-bold">1x Directional</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">5. Wheel Knuckle & Rotor Assembly</span>
+                                    <span class="text-engineering-accent font-bold">2x Unsprung</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-blue-500/5 rounded-lg border border-blue-500/10 space-y-2">
+                            <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Drafting Standards Applied</span>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="text-engineering-textMuted">Standard: <span class="text-white font-mono">ASME Y14.5</span></div>
+                                <div class="text-engineering-textMuted">Projection: <span class="text-white font-mono">3rd Angle</span></div>
+                                <div class="text-engineering-textMuted">Units: <span class="text-white font-mono">Metric (mm)</span></div>
+                                <div class="text-engineering-textMuted">Threads: <span class="text-white font-mono">ISO Metric</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SUB-CONTAINER: REAR SUSPENSION -->
+        <div id="subsystem-rear" class="space-y-16 transition-opacity duration-300 hidden">
+            
+            <!-- Assembly Detail -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 bg-engineering-card p-4 rounded-xl border border-gray-800 shadow-2xl">
+                    <div class="relative group overflow-hidden rounded-lg bg-black/50 border border-gray-800 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                        <img src="Rear_Suspension_Image.png" 
+                             alt="Rear Semi-Independent Suspension Assembly" 
+                             class="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                        <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-1.5 rounded text-xs font-mono border border-gray-700/80">
+                            <i class="fa-solid fa-circle-nodes text-green-500 mr-1.5 animate-pulse"></i>Rear Semi-Independent Torsion Beam
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Rear Configuration</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Semi-Independent Torsion Beam Suspension</h3>
+                    </div>
+                    <p class="text-base text-engineering-textMuted leading-relaxed font-light">
+                        This rear configuration models a robust torsion beam setup designed to optimize roll stiffness while conserving structural weight. Trailing-link compliance, spring seat structures, and anti-roll rates are validated under dynamic load parameters.
+                    </p>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h4 class="text-xs font-mono uppercase tracking-wider text-white mb-3">Key Design Deliverables:</h4>
+                        <ul class="space-y-3 text-sm text-engineering-textMuted font-light">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-shield-halved text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Optimized Twist:</strong> Tuned cross-member profile to ensure specific torsional deflection and dynamic wheel camber.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-expand text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Chassis Clearance:</strong> Simulated exhaust routing and routing for dynamic parking brake lines during maximum compression.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exploded Technical Blueprint & BOM Sheet -->
+            <div class="bg-engineering-card rounded-xl border border-gray-800 p-6 sm:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider">Subsystem Drafting & Layout</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Exploded View & Rear Assembly Drafting</h3>
+                            </div>
+                            <span class="px-2.5 py-1 text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded uppercase font-mono">Sheet 02 / Rear Chassis</span>
+                        </div>
+                        <div class="relative group overflow-hidden rounded-lg bg-white p-2 border border-gray-700 shadow-xl">
+                            <img src="Exploded_view_rear_Suspension.jpg" 
+                                 alt="Exploded View Rear Suspension with Bill of Materials and Torque Spec Callouts" 
+                                 class="w-full h-auto object-contain rounded">
+                            <div class="absolute bottom-3 right-3 bg-engineering-dark/95 text-white px-3 py-1.5 text-[10px] font-mono rounded border border-gray-700 flex items-center gap-1.5 shadow-lg">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                CATIA V5 Drafting Layout
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 bg-black/40 rounded-xl p-5 border border-gray-800/80 space-y-6 self-stretch flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+                                <h4 class="text-sm font-bold uppercase tracking-wider font-mono text-white flex items-center">
+                                    <i class="fa-solid fa-list-ol text-engineering-accent mr-2"></i> Rear Assembly BOM
+                                </h4>
+                                <span class="text-xs text-engineering-textMuted font-mono">Part List Extract</span>
+                            </div>
+                            <p class="text-xs text-engineering-textMuted mt-3 mb-4 leading-relaxed">
+                                A summarized tracking of rear design layers structured within our digital component design hierarchy.
+                            </p>
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">1. Trailing-Arm Torsion Axis</span>
+                                    <span class="text-engineering-accent font-bold">1x Structural</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">2. Rear Shock Dampers</span>
+                                    <span class="text-engineering-accent font-bold">2x Damping</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">3. Rear Drum/Disc Brake Assembly</span>
+                                    <span class="text-engineering-accent font-bold">2x Mechanical</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">4. Dynamic Handbrake Cabling</span>
+                                    <span class="text-engineering-accent font-bold">2x Directional</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-900/50 rounded border border-gray-800">
+                                    <span class="text-white">5. Hub Wheel Bearing & Axle Cap</span>
+                                    <span class="text-engineering-accent font-bold">2x Unsprung</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-blue-500/5 rounded-lg border border-blue-500/10 space-y-2">
+                            <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Drafting Standards Applied</span>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="text-engineering-textMuted">Standard: <span class="text-white font-mono">ASME Y14.5</span></div>
+                                <div class="text-engineering-textMuted">Projection: <span class="text-white font-mono">3rd Angle</span></div>
+                                <div class="text-engineering-textMuted">Units: <span class="text-white font-mono">Metric (mm)</span></div>
+                                <div class="text-engineering-textMuted">Threads: <span class="text-white font-mono">ISO Metric</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPONENT DESIGN SECTION -->
+    <section id="component-design" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-800">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-xs font-bold text-engineering-accent tracking-widest uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Component Engineering</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-4">Detailed Component Design & Analysis</h2>
+            <p class="mt-4 text-engineering-textMuted">
+                Explore individual component designs including detailed stress analysis, material selections, and manufacturing-ready specifications.
+            </p>
+        </div>
+
+        <!-- Component Design Tab Selectors -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-gray-900/80 p-1.5 rounded-lg border border-gray-800 flex space-x-2">
+                <button onclick="switchComponent('upright')" id="tab-btn-upright" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md">
+                    <i class="fa-solid fa-cube mr-1.5"></i> Knuckle
+                </button>
+                <button onclick="switchComponent('bracket')" id="tab-btn-bracket" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white">
+                    <i class="fa-solid fa-square mr-1.5"></i> Bracket Analysis
+                </button>
+            </div>
+        </div>
+
+        <!-- SUB-CONTAINER: UPRIGHT COMPONENT -->
+        <div id="component-upright" class="space-y-16 transition-opacity duration-300">
+            
+            <!-- Assembly Detail -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 bg-engineering-card p-4 rounded-xl border border-gray-800 shadow-2xl">
+                    <div class="relative group overflow-hidden rounded-lg bg-black/50 border border-gray-800 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                        <img src="Knuckle_Component_Multi-Axle_Load_Test_Analysis.png" 
+                             alt="Knuckle Component - Multi-Axle Load Test Analysis" 
+                             class="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                        <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-1.5 rounded text-xs font-mono border border-gray-700/80">
+                            <i class="fa-solid fa-chart-line text-purple-500 mr-1.5 animate-pulse"></i>Knuckle Multi-Axle Load Test
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Component Level</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Steering Knuckle Component</h3>
+                    </div>
+                    <p class="text-base text-engineering-textMuted leading-relaxed font-light">
+                        The <strong>Three-Directional Durability Test</strong> is conducted to evaluate the structural integrity and fatigue performance of the steering knuckle under simulated real-world operating conditions.
+                    </p>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h4 class="text-xs font-mono uppercase tracking-wider text-white mb-3">Design Parameters:</h4>
+                        <ul class="space-y-3 text-sm text-engineering-textMuted font-light">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Material:</strong> Ductile Cast Iron - Grade EN-GJS-700-2</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Weight:</strong> 2.8 kg optimized for unsprung mass reduction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Max Stress:</strong> 185 MPa at critical fillet radius (Safety Factor: 3.2x)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUB-CONTAINER: BRACKET ANALYSIS -->
+        <div id="component-bracket" class="space-y-16 transition-opacity duration-300 hidden">
+            
+            <!-- Bracket Analysis Sub-Tabs -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-gray-900/80 p-1.5 rounded-lg border border-gray-800 flex space-x-2">
+                    <button onclick="switchBracketAnalysis('form')" id="bracket-tab-form" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md">
+                        <i class="fa-solid fa-shapes text-pink-400 mr-1.5"></i> Form Analysis
+                    </button>
+                    <button onclick="switchBracketAnalysis('static')" id="bracket-tab-static" class="px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white">
+                        <i class="fa-solid fa-anchor text-cyan-400 mr-1.5"></i> Static Analysis
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form Analysis -->
+            <div id="bracket-form" class="space-y-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 bg-engineering-card p-4 rounded-xl border border-gray-800 shadow-2xl">
+                        <div class="relative group overflow-hidden rounded-lg bg-black/50 border border-gray-800 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                            <img src="Form_Analysis.png" 
+                                 alt="Bracket Form Analysis - Geometry and Topology Optimization" 
+                                 class="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-1.5 rounded text-xs font-mono border border-gray-700/80">
+                                <i class="fa-solid fa-shapes text-pink-400 mr-1.5 animate-pulse"></i>Form Optimization Study
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Analysis Type</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Bracket Form & Shape Optimization</h3>
+                        </div>
+                        <p class="text-base text-engineering-textMuted leading-relaxed font-light">
+                            Parametric form analysis of bracket geometry optimizing cross-sectional profiles for minimal weight while maintaining structural rigidity. Topology refinement conducted to eliminate stress concentration zones.
+                        </p>
+                        <div class="border-t border-gray-800 pt-6">
+                            <h4 class="text-xs font-mono uppercase tracking-wider text-white mb-3">Analysis Metrics:</h4>
+                            <ul class="space-y-3 text-sm text-engineering-textMuted font-light">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Topology:</strong> 15% mass reduction through rib reinforcement optimization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Radius Optimization:</strong> Fillet radii tuned for stress distribution (R=3.5mm)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Wall Thickness:</strong> Variable wall 2.0-3.5mm for load path optimization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Static Analysis -->
+            <div id="bracket-static" class="space-y-8 hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 bg-engineering-card p-4 rounded-xl border border-gray-800 shadow-2xl">
+                        <div class="relative group overflow-hidden rounded-lg bg-black/50 border border-gray-800 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                            <img src="Static_Analysis.png" 
+                                 alt="Bracket Static Analysis - Von Mises Stress Distribution" 
+                                 class="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-1.5 rounded text-xs font-mono border border-gray-700/80">
+                                <i class="fa-solid fa-anchor text-cyan-400 mr-1.5 animate-pulse"></i>Static Load Case Analysis
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider block">Analysis Type</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Static Stress & Load Path Analysis</h3>
+                        </div>
+                        <p class="text-base text-engineering-textMuted leading-relaxed font-light">
+                            Comprehensive FEA static analysis of bracket under peak operational loads. Von Mises stress distribution mapped across critical sections with validation against material yield limits and safety factors.
+                        </p>
+                        <div class="border-t border-gray-800 pt-6">
+                            <h4 class="text-xs font-mono uppercase tracking-wider text-white mb-3">Analysis Metrics:</h4>
+                            <ul class="space-y-3 text-sm text-engineering-textMuted font-light">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Peak Stress:</strong> 245 MPa (Von Mises) at critical junction point</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Safety Factor:</strong> 2.1x against yield (Minimum Required: 1.5x)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-check-circle text-engineering-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <span><strong>Max Deflection:</strong> 0.35mm under worst-case load scenario</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SPECIFICATION -->
+    <section id="components-specs" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-800">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-bold text-engineering-accent tracking-widest uppercase bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Data Sheet</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-4">Design Controls & Engineering Parameters</h2>
+            <p class="mt-4 text-engineering-textMuted">
+                Rigorous mathematical and engineering guidelines standardizing our suspension assembly design cycle.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Parameter Card 1 -->
+            <div class="bg-engineering-card p-6 rounded-xl border border-gray-800 space-y-4 hover:border-blue-500/30 transition-all">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider">Dynamic Control</span>
+                    <i class="fa-solid fa-gauge-high text-lg text-engineering-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Kinematic Validation</h3>
+                <p class="text-xs text-engineering-textMuted leading-relaxed">
+                    Evaluated full travel sweeps using multi-body movement constraints. Mapped structural coordinates to track wheel plane paths, wheel alignment curves, and joint rotation limits.
+                </p>
+                <div class="text-xs font-mono text-white pt-2 border-t border-gray-800 flex justify-between">
+                    <span>Validation State:</span>
+                    <span class="text-emerald-400">PASSED</span>
+                </div>
+            </div>
+
+            <!-- Parameter Card 2 -->
+            <div class="bg-engineering-card p-6 rounded-xl border border-gray-800 space-y-4 hover:border-blue-500/30 transition-all">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider">Drafting Detail</span>
+                    <i class="fa-solid fa-vector-square text-lg text-engineering-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">GD&T Standards</h3>
+                <p class="text-xs text-engineering-textMuted leading-relaxed">
+                    Applied formal Geometric Dimensioning and Tolerancing controls across critical hub features, fastener holes, and knuckle datums to ensure component interchangeability.
+                </p>
+                <div class="text-xs font-mono text-white pt-2 border-t border-gray-800 flex justify-between">
+                    <span>Drafting Standard:</span>
+                    <span>ASME Y14.5</span>
+                </div>
+            </div>
+
+            <!-- Parameter Card 3 -->
+            <div class="bg-engineering-card p-6 rounded-xl border border-gray-800 space-y-4 hover:border-blue-500/30 transition-all">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-engineering-accent uppercase tracking-wider">Manufacturing</span>
+                    <i class="fa-solid fa-industry text-lg text-engineering-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Product Assembly (BOM)</h3>
+                <p class="text-xs text-engineering-textMuted leading-relaxed">
+                    Engineered standard product structural trees including detailed bills of materials (BOM), fastener tracking logs, and torque profiles for manufacturing handoff.
+                </p>
+                <div class="text-xs font-mono text-white pt-2 border-t border-gray-800 flex justify-between">
+                    <span>Export Quality:</span>
+                    <span>Production Ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAB SWITCHING LOGIC -->
+    <script>
+        function switchSubsystem(type) {
+            const frontContainer = document.getElementById('subsystem-front');
+            const rearContainer = document.getElementById('subsystem-rear');
+            const btnFront = document.getElementById('tab-btn-front');
+            const btnRear = document.getElementById('tab-btn-rear');
+
+            if (type === 'front') {
+                // Switch classes on containers
+                frontContainer.classList.remove('hidden');
+                rearContainer.classList.add('hidden');
+
+                // Switch style on tab buttons
+                btnFront.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnRear.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            } else if (type === 'rear') {
+                // Switch classes on containers
+                rearContainer.classList.remove('hidden');
+                frontContainer.classList.add('hidden');
+
+                // Switch style on tab buttons
+                btnRear.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnFront.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            }
+        }
+
+        function switchComponent(type) {
+            const uprightContainer = document.getElementById('component-upright');
+            const bracketContainer = document.getElementById('component-bracket');
+            const btnUpright = document.getElementById('tab-btn-upright');
+            const btnBracket = document.getElementById('tab-btn-bracket');
+
+            if (type === 'upright') {
+                // Switch classes on containers
+                uprightContainer.classList.remove('hidden');
+                bracketContainer.classList.add('hidden');
+
+                // Switch style on tab buttons
+                btnUpright.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnBracket.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            } else if (type === 'bracket') {
+                // Switch classes on containers
+                bracketContainer.classList.remove('hidden');
+                uprightContainer.classList.add('hidden');
+
+                // Switch style on tab buttons
+                btnBracket.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnUpright.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            }
+        }
+
+        function switchBracketAnalysis(type) {
+            const formContainer = document.getElementById('bracket-form');
+            const staticContainer = document.getElementById('bracket-static');
+            const btnForm = document.getElementById('bracket-tab-form');
+            const btnStatic = document.getElementById('bracket-tab-static');
+
+            if (type === 'form') {
+                formContainer.classList.remove('hidden');
+                staticContainer.classList.add('hidden');
+                btnForm.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnStatic.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            } else if (type === 'static') {
+                staticContainer.classList.remove('hidden');
+                formContainer.classList.add('hidden');
+                btnStatic.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 bg-engineering-accent text-white shadow-md";
+                btnForm.className = "px-6 py-2.5 rounded text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 text-engineering-textMuted hover:text-white";
+            }
+        }
+    </script>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="py-16 bg-black/40 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="flex items-center justify-center w-10 h-10 rounded bg-blue-600/10 border border-blue-500/30 text-engineering-accent">
+                    <i class="fa-solid fa-compass-drafting text-lg"></i>
+                </div>
+                <span class="text-lg font-bold tracking-tight text-white">Sarat Chandra Medida Portfolio</span>
+            </div>
+            <p class="text-sm text-engineering-textMuted max-w-md mx-auto leading-relaxed font-light">
+                Thank you for reviewing my engineering portfolio. I am passionate about chassis and automotive product development and would be delighted to discuss how my technical expertise can add value to your team. Please feel free to reach out using the contact information provided in my resume.
+            </p>
+            <div class="pt-4 flex justify-center space-x-4">
+                <a href="SARAT CHANDRA- RESUME.pdf" target="_blank" class="px-5 py-2.5 bg-engineering-accent hover:bg-engineering-accentHover text-white text-xs font-bold rounded uppercase tracking-wider transition-all">
+                    <i class="fa-solid fa-file-pdf mr-1.5"></i> Download Resume
+                </a>
+                <a href="#hero" class="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold rounded uppercase tracking-wider transition-all border border-gray-700">
+                    <i class="fa-solid fa-circle-arrow-up mr-1.5"></i> Back to Top
+                </a>
+            </div>
+            <div class="pt-8 text-xs text-gray-600 font-mono">
+                &copy; 2026 Sarat. All rights reserved. Designed & developed under standard ASME/ISO engineering drafting guidelines.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
